@@ -1,0 +1,49 @@
+{% include "header.html" %}
+
+<style>
+    .card {
+        flex: 1;
+        margin-right: 15px;
+        margin-bottom: 55px;
+        margin-top: 59px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+    }
+
+    .card:hover{
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<div class="container">
+    <div class="card-container">
+        {% for player in players %}
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-4" style="display: grid; place-items: center; margin-bottom: 10px; margin-top: 10px;">
+                    <img src="{{ player['picture'] }}" class="img-fluid" id="pic">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="font-size: 35px; padding: 0;"><strong style="font-size: 40px;">{{player['lastname']}}</strong> {{player['firstname']}}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Age : {{player['age']}}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Playing Position : {{player['description']}}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Start Date : {{player['start'].split('T')[0]}} {{player['start'].split('T')[1]}}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">End Date : {{player['end'].split('T')[0]}} {{player['end'].split('T')[1]}}</li>
+
+                            {% if session['username'] != player['username'] %}
+                            <a href="/send_request/{{ player['username'] }}" class="btn btn-primary" style="padding: 4px;">Send Invitation</a>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <li style="display: block; height: 500px; font-size: 90px; padding-top: 80px;">There Are No Players Available !</li>
+        {% endfor %}
+    </div>
+</div>
+
+{% include "footer.html" %}

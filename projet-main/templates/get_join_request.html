@@ -1,0 +1,103 @@
+{% include "header.html" %}
+
+<style>
+    .card {
+        flex: 1;
+        margin-right: 15px;
+        margin-bottom: 55px;
+        margin-top: 59px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+    }
+
+    .accept-button {
+        padding: 5px 20px;
+        border: 3px solid #0091ff; /* Border color */
+        background-color: transparent; /* Transparent background */
+        color: rgb(0, 0, 0); /* Text color */
+        font-size: 20px;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        width: 200px; /* Specific width */
+        height: 48px; /* Specific height, adjust padding or line-height if needed */
+        margin-left: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .accept-button:hover {
+        background-color: #0091ff; /* Background color on hover */
+        color: rgb(255, 255, 255); /* Text color on hover */
+    }
+
+    .refuse-button{
+        width: 120px; /* Increased width */
+        height: 45px; /* Decreased height */
+        border: 3px solid #0091ff; /* Ensure border is visible and the same for both */
+        color: #000; /* Text color - adjust as needed */
+        font-size: 16px; /* Example font size */
+        font-weight: 700; /* Change the font weight */
+        text-align: center; /* Center the text inside the button */
+        line-height: 34px;  /*Adjusted line height for text centering */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        outline: none; /* Remove outline to improve aesthetics */
+        margin: 5px; /* Optional: adds a little space between buttons if inline or wrapped */
+        margin-left: 20px;
+        /*display: inline-block;  Ensure buttons are displayed inline and respect width/height */
+        /*box-sizing: border-box;  Include padding and border in the element's total width and height */
+    }
+
+    .refuse-button {
+        background-color: #0091ff; /* Unique color for the first button */
+        color: #fff; /* White text color for better contrast */
+    }
+
+    .refuse-button:hover {
+        background-color: #fff; /* Inverse background color */
+        color: #0091ff; /* Inverse text color */
+    }
+
+    #buttons{
+        display: flex;
+        justify-content: end;
+    }
+
+</style>
+
+<div class="container">
+    <div class="card-container">
+        {% for join_request in join_requests  %}
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-4" style="display: grid; place-items: center; margin-bottom: 10px; margin-top: 10px;">
+                    <img src="{{ join_request['picture'] }}" class="img-fluid" id="pic">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="font-size: 35px; padding: 0;"><strong style="font-size: 40px;">{{ join_request['lastname'] }}</strong> {{ join_request['firstname'] }}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Age : {{ join_request['age'] }}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Phone Number: {{ join_request['phone'] }}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Email : {{ join_request['email'] }}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Message : {{ join_request['message'] }}</li>
+                            <li class="list-group-item" style="font-size: 20px;padding: 7px;">Playing Position : {{ join_request['description'] }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <a href="/accept_join_request/{{join_request['username']}}/{{session['username']}}"><button class="accept-button">Accept</button></a>
+                    <a href="/refuse_join_request/{{join_request['username']}}/{{session['username']}}"><button class="refuse-button">Refuse</button></a>
+                </div>
+
+            </div>
+        </div>
+        {% else %}
+        <li style="display: block; height: 500px; font-size: 100px; padding-top: 80px;">You Have No Requests !</li>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% include "footer.html" %}

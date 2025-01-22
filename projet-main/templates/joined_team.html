@@ -1,0 +1,44 @@
+{% include "header.html" %}
+
+<style>
+    .card {
+        flex: 1;
+        margin-right: 15px;
+        margin-bottom: 55px;
+        margin-top: 59px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+    }
+</style>
+
+<div class="container">
+  <div class="card-container">
+
+    {% for teammate in teammates  %}
+    <div class="card">
+      <div class="row g-0">
+        <div class="col-md-4" style="display: grid; place-items: center; margin-bottom: 10px; margin-top: 10px;">
+          <img src="{{ teammate['picture'] }}" class="img-fluid" id="pic">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" style="font-size: 35px; padding: 0;"><strong style="font-size: 40px;">{{ teammate['lastname'] }}</strong> {{ teammate['firstname'] }}</li>
+              <li class="list-group-item" style="font-size: 20px;padding: 7px;">Age : {{ teammate['age'] }}</li>
+              <li class="list-group-item" style="font-size: 20px;padding: 7px;">Phone Number : {{ teammate['phone'] }}</li>
+              <li class="list-group-item" style="font-size: 20px;padding: 7px;">Email : {{ teammate['email'] }}</li>
+              <li class="list-group-item" style="font-size: 20px;padding: 7px;">Playing Position : {{ teammate['description'] }}</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <li style="display: block; height: 500px; font-size: 100px; padding-top: 80px;">You Have No Teammates !</li>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% include "footer.html" %}

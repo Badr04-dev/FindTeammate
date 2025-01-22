@@ -1,0 +1,78 @@
+{% include "header.html" %}
+
+{% if logged_in %}
+<section class="banner">
+    <div class="content">
+
+        <div class="text-block">
+            <div class="welcoming">
+                <h1 style="color: white;">WELCOM BACK TO THE TEAM<br /><strong>{{ username }}</strong></h1>
+            </div>
+            <div class="text">
+                <div class="vertical-line-banner"></div>
+                CONNECT FOOTBALL PLAYERS<br />FROM THE CITY OF SUN
+            </div>
+            <a href="/add_to_waiting_list/{{session['id']}}"><button class="join-button">JOIN A TEAM</button></a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="info">
+        <p class="info_p">
+            Allowing them to find teammates and orgnize matches. It aims to foster Marseille's football community by enabling
+            players to create profiles, search for matches or players, join or
+            orgnize games.
+        </p>
+    </div>
+</section>
+
+<section class="yt_video">
+    <div class="yt-responsive">
+        <iframe
+                width="100%"
+                src="https://www.youtube.com/embed/xuas_Yc7VNQ?si=U-eKSj1eFJx4MLeA"
+                frameborder="0"
+        >
+        </iframe>
+    </div>
+</section>
+{% endif %}
+
+{% if not logged_in %}
+<section class="banner">
+    <div class="content">
+        <div class="text-block">
+            <div class="text">
+                <div class="vertical-line-banner"></div>
+                CONNECT FOOTBALL PLAYERS<br />FROM THE CITY OF SUN
+            </div>
+            <a href="/login"><button class="join-button">LOGIN</button></a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <p class="info_p">
+            Allowing them to find teammates and orgnize matches. It aims to foster Marseille's football community by enabling
+            players to create profiles, search for matches or players, join or
+            orgnize games.
+        </p>
+    </div>
+</section>
+
+<section class="yt_video">
+    <div class="yt-responsive">
+        <iframe
+                width="100%"
+                src="https://www.youtube.com/embed/xuas_Yc7VNQ?si=U-eKSj1eFJx4MLeA"
+                frameborder="0"
+        >
+        </iframe>
+    </div>
+</section>
+
+
+{% endif %}
+
+{% include "footer.html" %}

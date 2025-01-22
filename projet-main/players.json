@@ -1,0 +1,121 @@
+[
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/96.jpg",
+    "age": 38,
+    "firstname": "Lenny",
+    "lastname": "Rey",
+    "username": "lazyfrog764",
+    "email": "lenny.rey@example.com",
+    "phone": "+33 67 84 35 39 41",
+    "password": "scxakv",
+    "description": "Milieu Droit",
+    "availability": [
+      {
+        "start": "2024-04-23T12:30",
+        "end" : "2024-04-26T12:30"
+      }
+    ]
+  },
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/52.jpg",
+    "age": 20,
+    "firstname": "Elias",
+    "lastname": "Schmitt",
+    "username": "bluelion224",
+    "email": "elias.schmitt@example.com",
+    "phone": "+33 63 04 86 33 35",
+    "password": "sneaky",
+    "description": "Gardien",
+    "availability": [
+      {
+        "start": "2024-04-13T11:30",
+        "end" : "2024-04-16T11:30"
+      }
+    ]
+  },
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/49.jpg",
+    "age": 34,
+    "firstname": "Noah",
+    "lastname":"David",
+    "username": "smallladybug366",
+    "email": "noah.david@example.com",
+    "phone": "+33 64 04 19 23 68",
+    "password": "belinda",
+    "description": "Milieu Central",
+    "availability": [
+      {
+        "start": "2024-03-29T09:30",
+        "end" : "2024-04-01T12:30"
+      }
+    ]
+  },
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/63.jpg",
+    "age": 36,
+    "firstname": "Milo",
+    "lastname":"Boyer",
+    "username": "blackcat166",
+    "email": "milo.boyer@example.com",
+    "phone": "+33 66 64 25 25 46",
+    "password": "duffy",
+    "description": "Défenseur Droit",
+    "availability": [
+      {
+        "start": "2024-04-11T19:30",
+        "end" : "2024-04-11T22:30"
+      }
+    ]
+  },
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/27.jpg",
+    "age": 21,
+    "firstname": "Jordan",
+    "lastname":"Meyer",
+    "username": "yellowbear758",
+    "email": "jordan.meyer@example.com",
+    "phone": "+33 61 75 02 33 96",
+    "password": "helpme",
+    "description": "Milieu Droit",
+    "availability": [
+      {
+        "start": "2024-04-13T12:30",
+        "end" : "2024-04-13T18:30"
+      }
+    ]
+  },
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/85.jpg",
+    "age": 18,
+    "firstname": "Milo",
+    "lastname":"Jean",
+    "username": "purpletiger978",
+    "email": "milo.jean@example.com",
+    "phone": "+33 69 15 72 36 25",
+    "password": "punk",
+    "description": "Ailier Droit",
+    "availability": [
+      {
+        "start": "2024-04-02T09:30",
+        "end" : "2024-04-02T12:00"
+      }
+    ]
+  },
+  {
+    "picture": "https://randomuser.me/api/portraits/med/men/51.jpg",
+    "age": 27,
+    "firstname": "Yann",
+    "lastname":"Picard",
+    "username": "smalltiger176",
+    "email": "yann.picard@example.com",
+    "phone": "+33  63 06 00 31 71",
+    "password": "irish1",
+    "description": "Buteur",
+    "availability": [
+      {
+        "start": "2024-04-27T17:30",
+        "end" : "2024-04-27T22:30"
+      }
+    ]
+  }
+]

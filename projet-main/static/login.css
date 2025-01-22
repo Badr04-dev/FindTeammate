@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+
+body {
+    font-family: "Antonio", sans-serif;
+    margin: 0; /* Removes the default margin */
+    padding: 0; /* Adds padding around the content */
+    line-height: 1.6; /* Adjusts the line height for better readability */
+    background-color: #ffffff;
+}
+
+form{
+
+    margin-top: 100px;
+    margin-left: 100px;
+
+    margin-bottom: 100px;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 80px;
+    padding-left: 40px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    background-color: rgb(174, 186, 227);
+}
+
+
+#loginTitle{
+    display: grid;
+    place-items: center;
+    font-size: 50px;
+
+}
+
+#username, #password{
+    margin: 25px 0;
+}
+
+#inputUsername, #inputPassword{
+    border-radius: 0;
+}
+
+.vertical-line-banner {
+    height: 100%;
+    width: 9.5px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 960px;
+}
+
+.container{
+    padding: 0;
+    margin-left: 0px;
+}
+
+.image-container {
+    height: 100vh;
+    width: 114.9vh;
+    background-image: url("cr72.jpg");
+    background-size: cover;
+    background-position: left;
+    opacity: 0.6;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+#description{
+    position: absolute;
+    top: 20%; /* Centre verticalement */
+    left: 1100px; /* Centre horizontalement */
+
+    text-align: left; /* Centrer le texte horizontalement */
+    color: rgb(0, 0, 0);
+}
+
+#description h1 {
+    font-size: 200px; /* Taille de police */
+    line-height: 1.2; /* Hauteur de ligne */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+#loginButton {
+  width: 120px; /* Increased width */
+  height: 45px; /* Decreased height */
+  border: 3px solid #0091ff; /* Ensure border is visible and the same for both */
+  color: #000; /* Text color - adjust as needed */
+  font-size: 16px; /* Example font size */
+  font-weight: 700; /* Change the font weight */
+  text-align: center; /* Center the text inside the button */
+  line-height: 34px; /* Adjusted line height for text centering */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  outline: none; /* Remove outline to improve aesthetics */
+  margin: 5px; /* Optional: adds a little space between buttons if inline or wrapped */
+  display: inline-block; /* Ensure buttons are displayed inline and respect width/height */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#loginButton{
+    background-color: #0091ff; /* Unique color for the first button */
+    color: #fff; /* White text color for better contrast */
+}
+
+#loginButton:hover {
+    background-color: #fff; /* Inverse background color */
+    color: #0091ff; /* Inverse text color */
+}
+
+#alert{
+    font-size: 30px;
+}
+#logo{
+    width: 40px;
+    height: 40px;
+}
+
+#logoDiv{
+    width: 500px;
+}
+
+.d-none {
+    height: 50px;
+    position: relative;
+}

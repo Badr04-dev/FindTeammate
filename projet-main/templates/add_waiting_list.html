@@ -1,0 +1,29 @@
+{% include "header.html" %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='add_waiting_list.css') }}">
+
+{% if session['printError'] %}
+<div class="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+        You're already in the waiting list.
+    </div>
+</div>
+{% endif %}
+
+<div class="image-container3">
+    <div id="title">
+        <h1>THERE WILL ALWAYS<br/>BE TIME FOR<br /><strong>FOOTBALL</strong> </h1>
+    </div>
+    <div class="addForm">
+        <form method="POST" action="/add_to_waiting_list/{{session['id']}}">
+            <label>Start Date</label>
+            <input type="datetime-local" name="start" value="2024-04-03T11:30" required/>
+            <label>End Date</label>
+            <input type="datetime-local" name="end" value="2024-04-03T11:30" required/>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+
+{% include "footer.html" %}
