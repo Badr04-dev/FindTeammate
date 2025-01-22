@@ -54,7 +54,7 @@ def load(fname=JSONFILENAME, db_name=DBFILENAME):
          FOREIGN KEY (player1_id) REFERENCES player(id), 
          FOREIGN KEY (player2_id) REFERENCES player(id))''')
 
-    with open('players.json', 'r') as file:
+    with open('./projet-main/players.json', 'r') as file:
         data = json.load(file)
         for item in data:
             # Créer le joueur
